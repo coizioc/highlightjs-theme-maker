@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Highlight.js Theme Maker</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/default.min.css">
+    <link rel="stylesheet" href="css/style.css">   
+</head>
+<body>
+    <script src="js/jscolor.js"></script>
+    <div class="flex-container">
+        <div id="color-picker" class="flex-element">
+            <div class="padded">
+                <h1>Highlight.js Theme Maker</h1>
+                <hr>
+                <div id="options"></div>
+                <hr>
+                <div id="export" style="text-align: center;">
+                    <button id="export-button" onclick="exportCSS()">Export to CSS</button>
+                </div>
+            </div>
+        </div>
+        <div id="code-blocks" class="flex-element">
+            <div class="padded"></div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/build.js"></script>
+    <script>
+        build();
+    </script>
+</body>
+</html>

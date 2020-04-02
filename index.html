@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+        <head>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            
+                <title>Highlight.js Theme Maker</title>
+            
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/default.min.css">
+                <link rel="stylesheet" href="css/style.css">   
+            </head>
+            <body>
+                <script src="js/jscolor.js"></script>
+                <div class="flex-container">
+                    <div id="color-picker" class="flex-element">
+                        <div class="padded">
+                            <h1>Highlight.js Theme Maker</h1>
+                            <hr>
+                            <div id="options"><h2>Common</h2><div class="grid"><div class="grid-item"><div style="flex: 1 1 0%;"><label for="background"><span class="tooltip">
+                    Background
+                    <span class="tooltip-text">
+                        Background color
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="background" autocomplete="off" style="background-image: none; background-color: rgb(240, 240, 240); color: rgb(0, 0, 0); font-weight: normal; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="default-text"><span class="tooltip">
+                    Default Text
+                    <span class="tooltip-text">
+                        Default text color
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="default-text" autocomplete="off" style="background-image: none; background-color: rgb(68, 68, 68); color: rgb(255, 255, 255); font-weight: normal; font-style: normal;"></div></div></div><h2>General Purpose</h2><div class="grid"><div class="grid-item"><div style="flex: 1 1 0%;"><label for="keyword"><span class="tooltip">
+                    Keyword
+                    <span class="tooltip-text">
+                        Keyword in a regular Algol-style language
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="keyword" autocomplete="off" style="background-image: none; background-color: rgb(68, 68, 68); color: rgb(255, 255, 255); font-weight: bold; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="built_in"><span class="tooltip">
+                    Built-in
+                    <span class="tooltip-text">
+                        Built-in or library object (constant, class, function)
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="built_in" autocomplete="off" style="background-image: none; background-color: rgb(57, 115, 0); color: rgb(255, 255, 255); font-weight: normal; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="type"><span class="tooltip">
+                    Type
+                    <span class="tooltip-text">
+                        User-defined type in a language with first-class syntactically significant types, like Haskell
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="type" autocomplete="off" style="background-image: none; background-color: rgb(136, 0, 0); color: rgb(255, 255, 255); font-weight: normal; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="literal"><span class="tooltip">
+                    Literal
+                    <span class="tooltip-text">
+                        Special identifier for a built-in value (“true”, “false”, “null”)
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="literal" autocomplete="off" style="background-image: none; background-color: rgb(120, 169, 96); color: rgb(0, 0, 0); font-weight: normal; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="number"><span class="tooltip">
+                    Number
+                    <span class="tooltip-text">
+                        Number, including units and modifiers, if any
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="number" autocomplete="off" style="background-image: none; background-color: rgb(136, 0, 0); color: rgb(255, 255, 255); font-weight: normal; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="regexp"><span class="tooltip">
+                    Regex
+                    <span class="tooltip-text">
+                        Literal regular expression
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="regexp" autocomplete="off" style="background-image: none; background-color: rgb(188, 96, 96); color: rgb(255, 255, 255); font-weight: normal; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="string"><span class="tooltip">
+                    String
+                    <span class="tooltip-text">
+                        Literal string, character
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="string" autocomplete="off" style="background-image: none; background-color: rgb(136, 0, 0); color: rgb(255, 255, 255); font-weight: normal; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="subst"><span class="tooltip">
+                    Subst
+                    <span class="tooltip-text">
+                        Parsed section inside a literal string
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="subst" autocomplete="off" style="background-image: none; background-color: rgb(68, 68, 68); color: rgb(255, 255, 255); font-weight: normal; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="symbol"><span class="tooltip">
+                    Symbol
+                    <span class="tooltip-text">
+                        Symbolic constant, interned string, goto label
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="symbol" autocomplete="off" style="background-image: none; background-color: rgb(188, 96, 96); color: rgb(255, 255, 255); font-weight: normal; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="class"><span class="tooltip">
+                    Class
+                    <span class="tooltip-text">
+                        Class or class-level declaration (interfaces, traits, modules, etc.)
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="class" autocomplete="off" style="background-image: none; background-color: rgb(68, 68, 68); color: rgb(255, 255, 255); font-weight: normal; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="function"><span class="tooltip">
+                    Function
+                    <span class="tooltip-text">
+                        Function or method declaration
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="function" autocomplete="off" style="background-image: none; background-color: rgb(68, 68, 68); color: rgb(255, 255, 255); font-weight: normal; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="title"><span class="tooltip">
+                    Title
+                    <span class="tooltip-text">
+                        Name of a class or a function at the place of declaration
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="title" autocomplete="off" style="background-image: none; background-color: rgb(136, 0, 0); color: rgb(255, 255, 255); font-weight: bold; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="params"><span class="tooltip">
+                    Params
+                    <span class="tooltip-text">
+                        Block of function arguments (parameters) at the place of declaration
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="params" autocomplete="off" style="background-image: none; background-color: rgb(68, 68, 68); color: rgb(255, 255, 255); font-weight: normal; font-style: normal;"></div></div></div><h2>Meta</h2><div class="grid"><div class="grid-item"><div style="flex: 1 1 0%;"><label for="comment"><span class="tooltip">
+                    Comment
+                    <span class="tooltip-text">
+                        Comment
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="comment" autocomplete="off" style="background-image: none; background-color: rgb(136, 136, 136); color: rgb(0, 0, 0); font-weight: normal; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="doctag"><span class="tooltip">
+                    Doctag
+                    <span class="tooltip-text">
+                        Documentation markup within comments
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="doctag" autocomplete="off" style="background-image: none; background-color: rgb(68, 68, 68); color: rgb(255, 255, 255); font-weight: bold; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="meta"><span class="tooltip">
+                    Meta
+                    <span class="tooltip-text">
+                        Flags, modifiers, annotations, processing instructions, preprocessor directives, etc.
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="meta" autocomplete="off" style="background-image: none; background-color: rgb(31, 113, 153); color: rgb(255, 255, 255); font-weight: normal; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="meta-keyword"><span class="tooltip">
+                    Meta Keyword
+                    <span class="tooltip-text">
+                        Keyword or built-in within meta construct
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="meta-keyword" autocomplete="off" style="background-image: none; background-color: rgb(68, 68, 68); color: rgb(255, 255, 255); font-weight: bold; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="meta-string"><span class="tooltip">
+                    Meta String
+                    <span class="tooltip-text">
+                        String within meta construct
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="meta-string" autocomplete="off" style="background-image: none; background-color: rgb(77, 153, 191); color: rgb(0, 0, 0); font-weight: normal; font-style: normal;"></div></div></div><h2>Tags, Attributes, and Configs</h2><div class="grid"><div class="grid-item"><div style="flex: 1 1 0%;"><label for="section"><span class="tooltip">
+                    Section
+                    <span class="tooltip-text">
+                        Heading of a section in a config file, heading in text markup
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="section" autocomplete="off" style="background-image: none; background-color: rgb(136, 0, 0); color: rgb(255, 255, 255); font-weight: bold; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="tag"><span class="tooltip">
+                    Tag
+                    <span class="tooltip-text">
+                        XML/HTML tag
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="tag" autocomplete="off" style="background-image: none; background-color: rgb(68, 68, 68); color: rgb(255, 255, 255); font-weight: normal; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="name"><span class="tooltip">
+                    Name
+                    <span class="tooltip-text">
+                        Name of an XML tag, the first word in an s-expression
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="name" autocomplete="off" style="background-image: none; background-color: rgb(68, 68, 68); color: rgb(255, 255, 255); font-weight: bold; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="builtin-name"><span class="tooltip">
+                    Built-in Name
+                    <span class="tooltip-text">
+                        S-expression name from the language standard library
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="builtin-name" autocomplete="off" style="background-image: none; background-color: rgb(68, 68, 68); color: rgb(255, 255, 255); font-weight: normal; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="attr"><span class="tooltip">
+                    Attr
+                    <span class="tooltip-text">
+                        Name of an attribute with no language defined semantics (keys in JSON, setting names in .ini), also sub-attribute within another highlighted object, like XML tag
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="attr" autocomplete="off" style="background-image: none; background-color: rgb(68, 68, 68); color: rgb(255, 255, 255); font-weight: normal; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="attribute"><span class="tooltip">
+                    Attribute
+                    <span class="tooltip-text">
+                        Name of an attribute followed by a structured value part, like CSS properties
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="attribute" autocomplete="off" style="background-image: none; background-color: rgb(68, 68, 68); color: rgb(255, 255, 255); font-weight: bold; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="variable"><span class="tooltip">
+                    Variable
+                    <span class="tooltip-text">
+                        Variable in a config or a template file, environment var expansion in a script
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="variable" autocomplete="off" style="background-image: none; background-color: rgb(188, 96, 96); color: rgb(255, 255, 255); font-weight: normal; font-style: normal;"></div></div></div><h2>Markup</h2><div class="grid"><div class="grid-item"><div style="flex: 1 1 0%;"><label for="bullet"><span class="tooltip">
+                    Bullet
+                    <span class="tooltip-text">
+                        List item bullet in text markup
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="bullet" autocomplete="off" style="background-image: none; background-color: rgb(57, 115, 0); color: rgb(255, 255, 255); font-weight: normal; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="code"><span class="tooltip">
+                    Code
+                    <span class="tooltip-text">
+                        Code block in text markup
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="code" autocomplete="off" style="background-image: none; background-color: rgb(57, 115, 0); color: rgb(255, 255, 255); font-weight: normal; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="emphasis"><span class="tooltip">
+                    Emphasis
+                    <span class="tooltip-text">
+                        Emphasis in text markup
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="emphasis" autocomplete="off" style="background-image: none; background-color: rgb(68, 68, 68); color: rgb(255, 255, 255); font-weight: normal; font-style: italic;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="strong"><span class="tooltip">
+                    Strong
+                    <span class="tooltip-text">
+                        Strong emphasis in text markup
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="strong" autocomplete="off" style="background-image: none; background-color: rgb(68, 68, 68); color: rgb(255, 255, 255); font-weight: bold; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="formula"><span class="tooltip">
+                    Formula
+                    <span class="tooltip-text">
+                        Mathematical formula in text markup
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="formula" autocomplete="off" style="background-image: none; background-color: rgb(68, 68, 68); color: rgb(255, 255, 255); font-weight: normal; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="link"><span class="tooltip">
+                    Link
+                    <span class="tooltip-text">
+                        Hyperlink in text markup
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="link" autocomplete="off" style="background-image: none; background-color: rgb(188, 96, 96); color: rgb(255, 255, 255); font-weight: normal; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="quote"><span class="tooltip">
+                    Quote
+                    <span class="tooltip-text">
+                        Quotation in text markup
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="quote" autocomplete="off" style="background-image: none; background-color: rgb(136, 0, 0); color: rgb(255, 255, 255); font-weight: normal; font-style: normal;"></div></div></div><h2>CSS</h2><div class="grid"><div class="grid-item"><div style="flex: 1 1 0%;"><label for="selector-tag"><span class="tooltip">
+                    Tag Selector
+                    <span class="tooltip-text">
+                        Tag selector in CSS
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="selector-tag" autocomplete="off" style="background-image: none; background-color: rgb(68, 68, 68); color: rgb(255, 255, 255); font-weight: bold; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="selector-id"><span class="tooltip">
+                    ID Selector
+                    <span class="tooltip-text">
+                        #id selector in CSS
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="selector-id" autocomplete="off" style="background-image: none; background-color: rgb(136, 0, 0); color: rgb(255, 255, 255); font-weight: normal; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="selector-class"><span class="tooltip">
+                    Class Selector
+                    <span class="tooltip-text">
+                        .class selector in CSS
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="selector-class" autocomplete="off" style="background-image: none; background-color: rgb(136, 0, 0); color: rgb(255, 255, 255); font-weight: normal; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="selector-attr"><span class="tooltip">
+                    Attr Selector
+                    <span class="tooltip-text">
+                        [attr] selector in CSS
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="selector-attr" autocomplete="off" style="background-image: none; background-color: rgb(188, 96, 128); color: rgb(255, 255, 255); font-weight: normal; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="selector-pseudo"><span class="tooltip">
+                    Pseudo Selector
+                    <span class="tooltip-text">
+                        :pseudo selector in CSS
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="selector-pseudo" autocomplete="off" style="background-image: none; background-color: rgb(188, 96, 128); color: rgb(255, 255, 255); font-weight: normal; font-style: normal;"></div></div></div><h2>Templates</h2><div class="grid"><div class="grid-item"><div style="flex: 1 1 0%;"><label for="template-tag"><span class="tooltip">
+                    Template Tag
+                    <span class="tooltip-text">
+                        Tag of a template language
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="template-tag" autocomplete="off" style="background-image: none; background-color: rgb(136, 0, 0); color: rgb(255, 255, 255); font-weight: normal; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="template-variable"><span class="tooltip">
+                    Template Variable
+                    <span class="tooltip-text">
+                        Variable in a template language
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="template-variable" autocomplete="off" style="background-image: none; background-color: rgb(68, 68, 68); color: rgb(255, 255, 255); font-weight: normal; font-style: normal;"></div></div></div><h2>Diff</h2><div class="grid"><div class="grid-item"><div style="flex: 1 1 0%;"><label for="addition"><span class="tooltip">
+                    Addition
+                    <span class="tooltip-text">
+                        Added or changed line in a diff
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="addition" autocomplete="off" style="background-image: none; background-color: rgb(57, 115, 0); color: rgb(255, 255, 255); font-weight: normal; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="deletion"><span class="tooltip">
+                    Deletion
+                    <span class="tooltip-text">
+                        Deleted line in a diff
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="deletion" autocomplete="off" style="background-image: none; background-color: rgb(136, 0, 0); color: rgb(255, 255, 255); font-weight: normal; font-style: normal;"></div></div></div><h2>ReasonML</h2><div class="grid"><div class="grid-item"><div style="flex: 1 1 0%;"><label for="operator"><span class="tooltip">
+                    Operator
+                    <span class="tooltip-text">
+                        ReasonML operator such as pipe
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="operator" autocomplete="off" style="background-image: none; background-color: rgb(68, 68, 68); color: rgb(255, 255, 255); font-weight: normal; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="pattern-match"><span class="tooltip">
+                    Pattern Match
+                    <span class="tooltip-text">
+                        ReasonML pattern matching matchers
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="pattern-match" autocomplete="off" style="background-image: none; background-color: rgb(68, 68, 68); color: rgb(255, 255, 255); font-weight: normal; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="typing"><span class="tooltip">
+                    Typing
+                    <span class="tooltip-text">
+                        Type signatures on function parameters
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="typing" autocomplete="off" style="background-image: none; background-color: rgb(68, 68, 68); color: rgb(255, 255, 255); font-weight: normal; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="constructor"><span class="tooltip">
+                    Constructor
+                    <span class="tooltip-text">
+                        Type constructors
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="constructor" autocomplete="off" style="background-image: none; background-color: rgb(68, 68, 68); color: rgb(255, 255, 255); font-weight: normal; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="module-access"><span class="tooltip">
+                    Module Access
+                    <span class="tooltip-text">
+                        Scope access into a ReasonML module
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="module-access" autocomplete="off" style="background-image: none; background-color: rgb(68, 68, 68); color: rgb(255, 255, 255); font-weight: normal; font-style: normal;"></div></div><div class="grid-item"><div style="flex: 1 1 0%;"><label for="module"><span class="tooltip">
+                    Module
+                    <span class="tooltip-text">
+                        ReasonML module reference within scope access
+                    </span>
+                </span></label></div><div style="flex: 1 1 0%;"><input id="module" autocomplete="off" style="background-image: none; background-color: rgb(68, 68, 68); color: rgb(255, 255, 255); font-weight: normal; font-style: normal;"></div></div></div></div>
+                            <hr>
+                            <div id="export" style="text-align: center;">
+                                <button id="export-button" onclick="exportCSS()">Export to CSS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="code-blocks" class="flex-element">
+                        <div class="padded"></div>
+                    </div>
+                </div>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+                <script src="js/script.js"></script>
+                <script>
+                    main();
+                </script>
+    </body>
+</html>

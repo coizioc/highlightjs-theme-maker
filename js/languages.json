@@ -1,0 +1,134 @@
+[
+    {
+        "name": "Apache",
+        "class": "apache"
+    },
+    {
+        "name": "Bash",
+        "class": "bash"
+    },
+    {
+        "name": "Coffeescript",
+        "class": "coffeescript"
+    },
+    {
+        "name": "C++",
+        "class": "cpp"
+    },
+    {
+        "name": "C#",
+        "class": "cs"
+    },
+    {
+        "name": "CSS",
+        "class": "css"
+    },
+    {
+        "name": "Go",
+        "class": "go"
+    },
+    {
+        "name": "HTTP",
+        "class": "http"
+    },
+    {
+        "name": "TOML + INI",
+        "class": "toml"
+    },
+    {
+        "name": "Java",
+        "class": "java"
+    },
+    {
+        "name": "Javascript",
+        "class": "js"
+    },
+    {
+        "name": "JSON",
+        "class": "json"
+    },
+    {
+        "name": "Kotlin",
+        "class": "kotlin"
+    },
+    {
+        "name": "Less",
+        "class": "less"
+    },
+    {
+        "name": "Lua",
+        "class": "lua"
+    },
+    {
+        "name": "Makefile",
+        "class": "makefile"
+    },
+    {
+        "name": "Markdown",
+        "class": "markdown"
+    },
+    {
+        "name": "Nginx",
+        "class": "nginx"
+    },
+    {
+        "name": "Objective-C",
+        "class": "objc"
+    },
+    {
+        "name": "Perl",
+        "class": "perl"
+    },
+    {
+        "name": "PHP",
+        "class": "php"
+    },
+    {
+        "name": "plaintext",
+        "class": "plaintext"
+    },
+    {
+        "name": "Properties",
+        "class": "properties"
+    },
+    {
+        "name": "Python",
+        "class": "python"
+    },
+    {
+        "name": "Ruby",
+        "class": "ruby"
+    },
+    {
+        "name": "Rust",
+        "class": "rust"
+    },
+    {
+        "name": "SCSS",
+        "class": "scss"
+    },
+    {
+        "name": "Shell Session",
+        "class": "shell"
+    },
+    {
+        "name": "SQL",
+        "class": "sql"
+    },
+    {
+        "name": "Swift",
+        "class": "swift"
+    },
+    {
+        "name": "TypeScript",
+        "class": "typescript"
+    },
+    {
+        "name": "HTML and XML",
+        "class": "html"
+    },
+    {
+        "name": "YAML",
+        "class": "yaml"
+    }
+]

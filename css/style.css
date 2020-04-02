@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+input {
+    width: 6em;
+    text-align: center;
+    font-weight: bold;
+    padding: 12px 10px;
+    margin: 8px 5px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+}
+
+input[type=checkbox] {
+    width: 2em;
+}
+
+pre > code {
+    font-family: "Sans Mono", 'Courier New', Courier, monospace;
+}
+
+span[class^="hljs"]:hover {
+    filter: brightness(150%);
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    min-height: min-content;
+}
+
+.flex-element {
+    flex: 1;
+
+    width: 97.5vw;
+    max-width: 97.5vw;
+    height: 50vh;
+    max-height: 50vh;
+    
+    overflow: auto;
+}
+
+.padded {
+    padding: 15px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+}
+
+.tooltip .tooltip-text {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease-in-out;
+    -moz-transition: opacity 0.25s ease-in-out;
+    -webkit-transition: opacity 0.25s ease-in-out;
+
+    -webkit-column-break-inside: avoid;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+    overflow: visible;
+
+    position: absolute;
+    z-index: 1;
+
+    width: 120px;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+
+    background-color: #444;
+    border: 3px solid #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.tooltip:hover .tooltip-text {
+    opacity: 1;
+    visibility: visible;
+}
+
+.grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+    position: relative;
+    padding: 0 2rem;
+}
+
+.grid-item {
+    display: flex;
+    align-items: center;
+    background-color: #FFF;
+    transition: background-color 0.25s ease-in-out;
+    border-radius: 5px;
+}
+
+.highlight {
+    background-color: #CCC;
+    transition: background-color 0.25s ease-in-out;
+}
+
+#code-blocks {
+    border-top: 1px solid black;
+}
+
+#export-button {
+    color: #FFF;
+    background-color: #333;
+    width: 15em;
+    text-align: center;
+    font-weight: bold;
+    padding: 12px 10px;
+    margin: 8px 5px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+}
+
+#default-button {
+    background-color: #CCC;
+    text-align: center;
+    margin: 8px 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+}
+
+@media only screen and (min-width: 1000px) {
+    .flex-container {
+        flex-direction: row;
+    }
+
+    .flex-element {
+        width: 50vw;
+        max-width: 50vw;
+        height: 97.5vh;
+        max-height: 97.5vh;
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+    }
+
+    #code-blocks {
+        border-top: none;
+    }
+}

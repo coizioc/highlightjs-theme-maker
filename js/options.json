@@ -1,0 +1,399 @@
+[
+    {
+        "name": "Common",
+        "options": [
+            {
+                "title": "Background",
+                "description": "Background color",
+                "class": "background",
+                "color": "F0F0F0",
+                "property": "background"
+            },
+            {
+                "title": "Default Text",
+                "description": "Default text color",
+                "class": "default-text",
+                "color": "444444"
+            }
+        ]
+    },
+    {
+        "name": "General Purpose",
+        "options": [
+            {
+                "title": "Keyword",
+                "description": "Keyword in a regular Algol-style language",
+                "class": "keyword",
+                "color": "444444",
+                "bold": true,
+                "useDefault": true
+            },
+            {
+                "title": "Built-in",
+                "description": "Built-in or library object (constant, class, function)",
+                "class": "built_in",
+                "color": "397300",
+                "useDefault": false
+            },
+            {
+                "title": "Type",
+                "description": "User-defined type in a language with first-class syntactically significant types, like Haskell",
+                "class": "type",
+                "color": "880000",
+                "useDefault": false
+            },
+            {
+                "title": "Literal",
+                "description": "Special identifier for a built-in value (“true”, “false”, “null”)",
+                "class": "literal",
+                "color": "78A960",
+                "useDefault": false
+            },
+            {
+                "title": "Number",
+                "description": "Number, including units and modifiers, if any",
+                "class": "number",
+                "color": "880000",
+                "useDefault": false
+            },
+            {
+                "title": "Regex",
+                "description": "Literal regular expression",
+                "class": "regexp",
+                "color": "BC6060",
+                "useDefault": false
+            },
+            {
+                "title": "String",
+                "description": "Literal string, character",
+                "class": "string",
+                "color": "880000",
+                "useDefault": false
+            },
+            {
+                "title": "Subst",
+                "description": "Parsed section inside a literal string",
+                "class": "subst",
+                "color": "444444",
+                "useDefault": false
+            },
+            {
+                "title": "Symbol",
+                "description": "Symbolic constant, interned string, goto label",
+                "class": "symbol",
+                "color": "BC6060",
+                "useDefault": false
+            },
+            {
+                "title": "Class",
+                "description": "Class or class-level declaration (interfaces, traits, modules, etc.)",
+                "class": "class",
+                "color": "444444",
+                "useDefault": true
+            },
+            {
+                "title": "Function",
+                "description": "Function or method declaration",
+                "class": "function",
+                "color": "444444",
+                "useDefault": true
+            },
+            {
+                "title": "Title",
+                "description": "Name of a class or a function at the place of declaration",
+                "class": "title",
+                "color": "880000",
+                "bold": true,
+                "useDefault": false
+            },
+            {
+                "title": "Params",
+                "description": "Block of function arguments (parameters) at the place of declaration",
+                "class": "params",
+                "color": "444444",
+                "useDefault": true
+            }
+        ]
+    },
+    {
+        "name": "Meta",
+        "options": [
+            {
+                "title": "Comment",
+                "description": "Comment",
+                "class": "comment",
+                "color": "888888",
+                "useDefault": false
+            },
+            {
+                "title": "Doctag",
+                "description": "Documentation markup within comments",
+                "class": "doctag",
+                "color": "444444",
+                "bold": true,
+                "useDefault": true
+            },
+            {
+                "title": "Meta",
+                "description": "Flags, modifiers, annotations, processing instructions, preprocessor directives, etc.",
+                "class": "meta",
+                "color": "1f7199",
+                "useDefault": false
+            },
+            {
+                "title": "Meta Keyword",
+                "description": "Keyword or built-in within meta construct",
+                "class": "meta-keyword",
+                "color": "444444",
+                "bold": true,
+                "useDefault": true
+            },
+            {
+                "title": "Meta String",
+                "description": "String within meta construct",
+                "class": "meta-string",
+                "color": "4d99bf",
+                "useDefault": false
+            }
+        ]
+    },
+    {
+        "name": "Tags, Attributes, and Configs",
+        "options": [
+            {
+                "title": "Section",
+                "description": "Heading of a section in a config file, heading in text markup",
+                "class": "section",
+                "color": "880000",
+                "bold": true,
+                "useDefault": false
+            },
+            {
+                "title": "Tag",
+                "description": "XML/HTML tag",
+                "class": "tag",
+                "color": "444444",
+                "useDefault": true
+            },
+            {
+                "title": "Name",
+                "description": "Name of an XML tag, the first word in an s-expression",
+                "class": "name",
+                "color": "444444",
+                "bold": true,
+                "useDefault": true
+            },
+            {
+                "title": "Built-in Name",
+                "description": "S-expression name from the language standard library",
+                "class": "builtin-name",
+                "color": "444444",
+                "useDefault": true
+            },
+            {
+                "title": "Attr",
+                "description": "Name of an attribute with no language defined semantics (keys in JSON, setting names in .ini), also sub-attribute within another highlighted object, like XML tag",
+                "class": "attr",
+                "color": "444444",
+                "useDefault": true
+            },
+            {
+                "title": "Attribute",
+                "description": "Name of an attribute followed by a structured value part, like CSS properties",
+                "class": "attribute",
+                "color": "444444",
+                "bold": true,
+                "useDefault": true
+            },
+            {
+                "title": "Variable",
+                "description": "Variable in a config or a template file, environment var expansion in a script",
+                "class": "variable",
+                "color": "BC6060",
+                "useDefault": false
+            }
+        ]
+    },
+    {
+        "name": "Markup",
+        "options": [
+            {
+                "title": "Bullet",
+                "description": "List item bullet in text markup",
+                "class": "bullet",
+                "color": "397300",
+                "useDefault": false
+            },
+            {
+                "title": "Code",
+                "description": "Code block in text markup",
+                "class": "code",
+                "color": "397300",
+                "useDefault": false
+            },
+            {
+                "title": "Emphasis",
+                "description": "Emphasis in text markup",
+                "class": "emphasis",
+                "color": "444444",
+                "italic": true,
+                "useDefault": true
+            },
+            {
+                "title": "Strong",
+                "description": "Strong emphasis in text markup",
+                "class": "strong",
+                "color": "444444",
+                "bold": true,
+                "useDefault": true
+            },
+            {
+                "title": "Formula",
+                "description": "Mathematical formula in text markup",
+                "class": "formula",
+                "color": "444444",
+                "useDefault": true
+            },
+            {
+                "title": "Link",
+                "description": "Hyperlink in text markup",
+                "class": "link",
+                "color": "BC6060",
+                "useDefault": false
+            },
+            {
+                "title": "Quote",
+                "description": "Quotation in text markup",
+                "class": "quote",
+                "color": "880000",
+                "useDefault": false
+            }
+        ]
+    },
+    {
+        "name": "CSS",
+        "options": [
+            {
+                "title": "Tag Selector",
+                "description": "Tag selector in CSS",
+                "class": "selector-tag",
+                "color": "444444",
+                "bold": true,
+                "useDefault": true
+            },
+            {
+                "title": "ID Selector",
+                "description": "#id selector in CSS",
+                "class": "selector-id",
+                "color": "880000",
+                "useDefault": false
+            },
+            {
+                "title": "Class Selector",
+                "description": ".class selector in CSS",
+                "class": "selector-class",
+                "color": "880000",
+                "useDefault": false
+            },
+            {
+                "title": "Attr Selector",
+                "description": "[attr] selector in CSS",
+                "class": "selector-attr",
+                "color": "BC6080",
+                "useDefault": false
+            },
+            {
+                "title": "Pseudo Selector",
+                "description": ":pseudo selector in CSS",
+                "class": "selector-pseudo",
+                "color": "BC6080",
+                "useDefault": false
+            }
+        ]
+    },
+    {
+        "name": "Templates",
+        "options": [
+            {
+                "title": "Template Tag",
+                "description": "Tag of a template language",
+                "class": "template-tag",
+                "color": "880000",
+                "useDefault": false
+            },
+            {
+                "title": "Template Variable",
+                "description": "Variable in a template language",
+                "class": "template-variable",
+                "color": "444444",
+                "useDefault": false
+            }
+        ]
+    },
+    {
+        "name": "Diff",
+        "options": [
+            {
+                "title": "Addition",
+                "description": "Added or changed line in a diff",
+                "class": "addition",
+                "color": "397300",
+                "useDefault": false
+            },
+            {
+                "title": "Deletion",
+                "description": "Deleted line in a diff",
+                "class": "deletion",
+                "color": "880000",
+                "useDefault": false
+            }
+        ]
+    },
+    {
+        "name": "ReasonML",
+        "options": [
+            {
+                "title": "Operator",
+                "description": "ReasonML operator such as pipe",
+                "class": "operator",
+                "color": "444444",
+                "useDefault": true
+            },
+            {
+                "title": "Pattern Match",
+                "description": "ReasonML pattern matching matchers",
+                "class": "pattern-match",
+                "color": "444444",
+                "useDefault": true
+            },
+            {
+                "title": "Typing",
+                "description": "Type signatures on function parameters",
+                "class": "typing",
+                "color": "444444",
+                "useDefault": true
+            },
+            {
+                "title": "Constructor",
+                "description": "Type constructors",
+                "class": "constructor",
+                "color": "444444",
+                "useDefault": true
+            },
+            {
+                "title": "Module Access",
+                "description": "Scope access into a ReasonML module",
+                "class": "module-access",
+                "color": "444444",
+                "useDefault": true
+            },
+            {
+                "title": "Module",
+                "description": "ReasonML module reference within scope access",
+                "class": "module",
+                "color": "444444",
+                "useDefault": true
+            }
+        ]
+    }
+]
