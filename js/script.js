@@ -49,7 +49,7 @@ function exportCSS() {
     overflow-x: auto;
     padding: .5em;
 }\n`;
-    document.getElementsByTagName('input').forEach(tag => {
+    Array.from(document.getElementsByTagName('input')).forEach(tag => {
         className = getCSSClassName(tag.id);
 
         let color = tag.style.backgroundColor;
